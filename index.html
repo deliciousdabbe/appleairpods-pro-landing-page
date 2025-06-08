@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gadget Bird – AirPods Pro 2nd Gen</title>
+  <link href="https://fonts.googleapis.com/css2?family=TrioBangla&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #f47c48;
+      --dark: #333;
+      --light-bg: #fafafa;
+      --card-bg: #fff;
+      --font: 'TrioBangla', sans-serif;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:var(--font); background:var(--light-bg); color:var(--dark); }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; border-radius:8px; }
+    .container { width:90%; max-width:900px; margin:0 auto; padding:1rem 0; }
+
+    /* Top banner */
+    .banner {
+      background:var(--primary); color:#fff; text-align:center;
+      padding:1rem; font-size:1rem;
+    }
+    .banner p { margin-bottom:0.5rem; }
+
+    /* Warranty */
+    .warranty {
+      background:#fff; padding:1rem; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); margin:1rem 0;
+      font-size:0.95rem; text-align:center;
+    }
+
+    /* Products selection */
+    .products {
+      display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0;
+    }
+    .product-card {
+      background:var(--card-bg); border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); overflow:hidden;
+    }
+    .product-card img { height:200px; object-fit:cover; }
+    .product-card .info {
+      padding:1rem;
+      text-align:center;
+    }
+    .product-card h3 { font-size:1.1rem; margin-bottom:0.5rem; }
+    .product-card .price { color:var(--primary); font-size:1.2rem; font-weight:bold; }
+
+    /* Details title */
+    .details-title {
+      margin:2rem 0 1rem;
+      font-size:1.4rem; font-weight:bold;
+    }
+
+    /* Features grid */
+    #features {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem;
+    }
+    #features li {
+      background:var(--card-bg); padding:1rem; border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1); position:relative;
+      list-style:none;
+    }
+    #features li::before {
+      content:'✔️'; position:absolute; top:1rem; left:1rem;
+    }
+    #features li span { margin-left:1.5rem; }
+
+    /* Reviews carousel */
+    .reviews-title { margin:2rem 0 1rem; font-size:1.4rem; font-weight:bold; }
+    .reviews { overflow-x:auto; display:flex; gap:1rem; padding-bottom:1rem; }
+    .reviews img { flex:0 0 80%; height:200px; object-fit:cover; border-radius:8px; }
+    .reviews::-webkit-scrollbar { display:none; }
+
+    /* Checkout embed */
+    #checkout { margin:2rem 0; }
+    #checkout iframe { width:100%; height:600px; border:none; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+
+    /* Floating button */
+    #orderNow {
+      position:fixed; bottom:1.5rem; left:50%; transform:translateX(-50%);
+      background:var(--primary); color:#fff; border:none;
+      padding:0.8rem 2rem; font-size:1rem; border-radius:30px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2); cursor:pointer; z-index:100;
+    }
+    @media(max-width:600px) {
+      .products { grid-template-columns:1fr; }
+      .reviews img { flex:0 0 70%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="banner">
+    <p>🎁 এখনই অর্ডার করুন ও উপভোগ করুন ফ্রি ডেলিভারি সারাদেশে!</p>
+    <p>👉 100% Cash on Delivery | কোনো অ্যাডভান্স পেমেন্ট নয়!</p>
+  </div>
+
+  <div class="container">
+    <!-- Warranty info -->
+    <div class="warranty">
+      ✅ ৫ দিনের রিপ্লেসমেন্ট + ১ মাসের ওয়ারেন্টি
+    </div>
+
+    <!-- Products -->
+    <div class="products">
+      <div class="product-card">
+        <img src="https://drive.google.com/uc?export=view&id=1aHbsesKJpkFPQUlK8Ut8SnQAzJ9VERqq" alt="AirPods Pro White">
+        <div class="info">
+          <h3>AirPods Pro 2nd Gen (White/সাদা)</h3>
+          <div class="price">মাত্র ৫৮০ টাকা</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://drive.google.com/uc?export=view&id=19p87viPM5Ta4geBXJMiPTfA_gkqTMyRx" alt="AirPods Pro Black">
+        <div class="info">
+          <h3>AirPods Pro 2nd Gen (Black/কালো)</n        <div class="price">মাত্র ৬৮০ টাকা</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="details-title">🛍 পণ্যের বিস্তারিত</div>
+    <ul id="features">
+      <li><span>ব্লুটুথ সংযোগ ➤ দ্রুত ও স্থিতিশীল Bluetooth 5.1</span></li>
+      <li><span>LED দেখায় পায়</span></li>
+      <li><span>বিপ সাউন্ড ➤ বক্স ওপেন করলে সাউন্ড দেয়</span></li>
+      <li><span>Find My অ্যাসেম্বল্ড ইন Dubai & Find My অ্যাপে খুঁজে পাওয়া যায়</span></li>
+      <li><span>ব্যাটারি ব্যাকআপ ➤ এক চার্জে দীর্ঘক্ষণ</span></li>
+      <li><span>স্মার্ট ফিচারস ➤ iOS/Android-এ ব্যাটারি পার্সেন্ট দেখায়</span></li>
+      <li><span>ইন-ইয়ার ডিজাইন ➤ আরামদায়ক ফিট</span></li>
+      <li><span>চার্জিং কেস ➤ দ্রুত চার্জ হয়</span></li>
+      <li><span>অটো কানেকশন ➤ কেস খুললেই অটোমেটিক কানেক্ট</span></li>
+      <li><span>মাইক্রোফোন & কলিং ➤ পরিষ্কার ভয়েস, ডুয়াল মাইক্রোফোন</span></li>
+    </ul>
+
+    <!-- Customer Reviews -->
+    <div class="reviews-title">🗣 কাস্টমার রিভিউ</div>
+    <div class="reviews">
+      <!-- Replace IDs with your drive file IDs -->
+      <img src="https://drive.google.com/uc?export=view&id=REVIEW_IMG_ID1" alt="Review">
+      <img src="https://drive.google.com/uc?export=view&id=REVIEW_IMG_ID2" alt="Review">
+      <img src="https://drive.google.com/uc?export=view&id=REVIEW_IMG_ID3" alt="Review">
+      <img src="https://drive.google.com/uc?export=view&id=REVIEW_IMG_ID4" alt="Review">
+    </div>
+
+    <!-- Checkout Form -->
+    <section id="checkout">
+      <iframe src="https://sites.google.com/view/gadgetbird/airpods-pro-2nd-gen/checkout-page" loading="lazy"></iframe>
+    </section>
+
+  </div>
+
+  <!-- Floating Order Button -->
+  <button id="orderNow">অর্ডার করুন</button>
+
+  <script>
+    document.getElementById('orderNow').addEventListener('click', () => {
+      document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
